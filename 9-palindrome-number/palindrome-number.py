@@ -4,9 +4,8 @@ class Solution:
         if x<0:
             return False
         y=0
-        while x>0:
-            y=y*10+x%10
-            x=x//10
-        print(y)
-        if k==y:
+        while k>0:
+            y=y*10+k%10
+            k=k//10
+        if x==y:
             return True
