@@ -5,10 +5,9 @@ class Solution:
             'C': 100, 'D': 500, 'M': 1000
         }
         res = 0
-        b=len(s)
-        for i in range(b):
+        for i in range(len(s)):
             a=roman_to_int[s[i]]
-            if i < b - 1 and a < roman_to_int[s[i + 1]]:
+            if i < len(s) - 1 and a < roman_to_int[s[i + 1]]:
                 res -= a
             else:
                 res+=a
