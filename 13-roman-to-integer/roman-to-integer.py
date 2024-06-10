@@ -6,10 +6,9 @@ class Solution:
         }
         res = 0
         for i in range(len(s)):
-            if i < len(s) - 1 and roman_to_int[s[i]]< roman_to_int[s[i + 1]]:
-                a=roman_to_int[s[i]]
+            a=roman_to_int[s[i]]
+            if i < len(s) - 1 and a < roman_to_int[s[i + 1]]:
                 res -= a
             else:
-                a=roman_to_int[s[i]]
                 res+=a
         return res
