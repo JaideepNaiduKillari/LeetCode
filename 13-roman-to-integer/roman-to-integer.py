@@ -8,8 +8,7 @@ class Solution:
         b=len(s)
         for i in range(b):
             if i < b - 1 and roman_to_int[s[i]] < roman_to_int[s[i + 1]]:
-                a=roman_to_int[s[i]]
-                res-=a
+                res -= roman_to_int[s[i]]
             else:
                 a=roman_to_int[s[i]]
                 res+=a
