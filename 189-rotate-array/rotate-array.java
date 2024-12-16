@@ -6,11 +6,13 @@ class Solution {
         for(int i =0;i<x;++i){
             arr[i]=nums[i];
         }
-        for(int i = 0;i<k;++i){
-            nums[i] = nums[x+i];
+        for(int i = 0;i<nums.length;++i){
+            if(i<k){
+                nums[i] = nums[x+i];
+            }
+            else{
+                nums[i] = arr[i-k];
+            }    
         }
-        for(int i =k;i<nums.length;++i){
-            nums[i] = arr[i-k];
-        }    
     }
 }
